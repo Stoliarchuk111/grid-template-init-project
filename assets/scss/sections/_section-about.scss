@@ -33,15 +33,16 @@
   &__content {
     
     & p {
-      margin: 18 0;
+      margin: 18px 0;
 
       color: $color-gray;
 
-      font-size: 1.125rem;
+      @include lg-min {
+        font-size: 1.125rem;
+      }
 
       &:first-of-type {
         position: relative;
-
         margin-top: -5px;
 
         &::after {
@@ -55,6 +56,21 @@
           content: "";
 
           background-color: rgba(99, 117, 136, 0.1);
+          @include lg-min {
+            right: -50px;
+          }
+
+          @include lg-md {
+            right: -20px;
+          }
+
+          @include md-sm {
+            right: -10px;
+          }
+          @include sm {
+            display: none;
+          }
+
         }
       }
 

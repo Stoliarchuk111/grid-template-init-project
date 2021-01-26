@@ -3,9 +3,10 @@
 }
 html {
   overflow-y: scroll;
-  font-family: $font-main;
+  overflow-x: scroll;
   font-size: 1rem;
   line-height: 1.15;
+  font-family: $font-main;
 }
 h1 {
   letter-spacing: 0.08em;

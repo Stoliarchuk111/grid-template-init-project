@@ -502,9 +502,10 @@ template {
 
 html {
   overflow-y: scroll;
-  font-family: "Roboto", sans-serif;
+  overflow-x: scroll;
   font-size: 1rem;
   line-height: 1.15;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -866,9 +867,8 @@ a {
 }
 
 .about__content p {
-  margin: 18 0;
+  margin: 18px 0;
   color: #637588;
-  font-size: 1.125rem;
 }
 
 .about__content p:first-of-type {
@@ -958,6 +958,7 @@ a {
   border-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
 .form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
@@ -1218,6 +1219,12 @@ a {
     gap: 100px;
     grid-template-columns: 1fr 271px;
   }
+  .about__content p {
+    font-size: 1.125rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -50px;
+  }
   .posts__grid {
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
@@ -1252,6 +1259,9 @@ a {
   .about__conteiner {
     gap: 40px;
     grid-template-columns: 1fr 271px;
+  }
+  .about__content p:first-of-type::after {
+    right: -20px;
   }
   .posts {
     padding-top: 80px;
@@ -1315,6 +1325,9 @@ a {
     gap: 20px;
     grid-template-columns: 1fr 236px;
   }
+  .about__content p:first-of-type::after {
+    right: -10px;
+  }
   .form__conteiner {
     grid-template-columns: 1fr 1fr;
   }
@@ -1363,6 +1376,9 @@ a {
   .about__conteiner {
     gap: 20px;
     grid-template-columns: 1fr;
+  }
+  .about__content p:first-of-type::after {
+    display: none;
   }
   .posts__grid {
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
