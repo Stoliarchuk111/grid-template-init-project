@@ -1,0 +1,79 @@
+.form {
+  padding: 30px 0;
+
+  color: $color-gray;
+  background-color: $color-primary;
+
+
+  &__conteiner {
+    @extend %container;
+    display: grid;
+    gap: 20px;
+    
+    
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+&-item {
+  &:nth-of-type(1) {
+    @include md-sm {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  &__button {
+    padding: 18px $gap;
+
+    letter-spacing: 0.1em;
+
+    color: $color-light;
+    border-bottom-color: rgba($color-light, 0.2);
+    background-color: rgba($color-light, 0.1);
+    @extend %button-input-form;
+
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      border-color: $color-light;
+      background-color: $color-accent;
+    }
+  }
+
+  &__input {
+    padding: 1px 30px;
+
+    letter-spacing: 0.15em;
+
+    border-bottom-color: rgba($color-light, 0.25);
+    background-color: rgba($color-light, 0.05);
+
+    @extend %button-input-form;
+
+    &::placeholder {
+      color: rgba($color-light, 0.51);
+    }
+
+
+    &:hover,
+    &:focus {
+      border-color: rgba($color-light, 0.1);
+      border-bottom-color: $color-light;
+      background-color: rgba($color-light, 0.15);
+
+      &::placeholder {
+        color: $color-light;
+      }
+    }
+    &:focus {
+      outline: none;
+      }
+    }
+  }
+}

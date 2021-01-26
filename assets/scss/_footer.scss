@@ -1,0 +1,63 @@
+.footer {
+    background-color: $color-primary;
+    padding: 50px $gap 70px;
+    text-align: center;
+
+    &__container {
+       @extend %container;
+    }
+    
+    &__social {
+        position: relative;
+        display: grid;
+        justify-content: center;
+        margin-bottom: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    
+        & a {
+            display: block;
+            padding: 10px;
+            transition: color 0.5s;
+
+            &:hover,
+            &:focus {
+                color: $color-accent;
+            }
+        }
+        & .fab {
+            font-size: 2.25rem;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: (-$gap);
+            left: calc(50% - 75px / 2);
+            background-color: rgba($color-light, 0.1);
+            width: 75px;
+            height: 2px;
+            content: "";
+        }
+    }
+
+
+    &__copy {
+
+
+        & span {
+          
+        
+            &:nth-of-type(1) {
+                margin-right: -0.5em;
+                letter-spacing: 0.33em;
+                font-weight: 100;
+                color: $color-gray;
+            }
+            &:nth-of-type(2) {
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                color: $color-light;
+            }
+        }
+    }
+}
+
